@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Akhona Clinic</title>
+    
+    <link rel="stylesheet" href="../CSS/style.css">
+    <!-- Included validation.js with deferred execution -->
+    <script src="../javascript/validation.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="../images/Logo 1..png" alt="Akhona Clinic" class="logo-img">
+            <h2>Akhona Clinic</h2>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about us.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Enquiry.html">Enquiry</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-banner">
+        <h1>Akhona Clinic</h1>
+        <p>If you have any questions or require emergency assistance, feel free to reach out to us using the options below.</p>
+    </section>
+
+    <main class="main-content">
+        <div class="container-grid">
+
+            <!-- LEFT COLUMN: Contact Details & Google Map -->
+            <div class="col-left">
+                <h2 class="tel-heading">Phone: +27 11 123 4567</h2>
+
+                <div class="info-cards-row">
+                    <!-- Postal / Location Card -->
+                    <div class="info-card">
+                        <h4>Location Address</h4>
+                        <p>18 Bartlett Rd, Mayfair, Johannesburg, 2109</p>
+                        <hr>
+                        <p><strong>Email</strong></p>
+                        <p class="phone-link">info@akhonaclinic.co.za</p>
+                    </div>
+
+                    <!-- Operating Hours Card -->
+                    <div class="info-card">
+                        <h4>Operating Hours</h4>
+                        <table class="hours-table">
+                            <tr>
+                                <td><strong>Monday – Friday:</strong></td>
+                                <td style="text-align: right;">08:00 AM – 05:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Saturday:</strong></td>
+                                <td style="text-align: right;">08:00 AM – 01:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sunday:</strong></td>
+                                <td style="text-align: right;">Closed</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Physical Address & Map -->
+                <div class="address-section">
+                    <h3>Physical Address</h3>
+                    <p class="address-text">18 Bartlett Rd, Mayfair, Johannesburg, 2109</p>
+
+                    <div class="map-box">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.0!2d28.0!3d-26.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzAwLjAiUyAyOMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890" 
+                            width="100%" 
+                            height="230" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: Contact / Appointment Form -->
+            <div class="col-right">
+                <div class="form-card">
+                    <h3>Send Us a Message</h3>
+
+                    <!-- Status Message Display -->
+                    <div id="formStatus" class="form-status-message"></div>
+
+                    <!-- Added id="contactForm" to link with validation.js -->
+                    <form id="contactForm" action="#" method="POST" novalidate>
+                        
+                        <div class="form-group">
+                            <label for="cname">Your Name:</label>
+                            <input type="text" id="cname" name="cname" placeholder="Full Name" required>
+                            <span id="nameError" class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cemail">Your Email:</label>
+                            <input type="email" id="cemail" name="cemail" placeholder="email@example.com" required>
+                            <span id="emailError" class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cphone">Contact Number:</label>
+                            <input type="tel" id="cphone" name="cphone" placeholder="+27 11 123 4567" required>
+                            <span id="phoneError" class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Clinic Location:</label>
+                            <select id="location" name="location" required>
+                                <option value="" disabled selected>Select Location</option>
+                                <option value="mayfair">Mayfair Branch</option>
+                            </select>
+                            <span id="locationError" class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="enquiry_type">Enquiry Type:</label> 
+                            <select id="enquiry_type" name="enquiry_type" required>
+                                <option value="" disabled selected>Please select type of enquiry</option>
+                                <option value="general">General Medical Enquiry</option>
+                                <option value="appointment">Book Appointment</option>
+                                <option value="emergency">Emergency Assistance</option>
+                            </select>
+                            <span id="enquiryError" class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cmessage">Message / Details:</label>
+                            <textarea id="cmessage" name="cmessage" rows="4" placeholder="Please fill out your request or booking details..." required></textarea>
+                            <span id="messageError" class="error-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn-submit-form">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER: 4 COLUMNS -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Column 1: Logo & Info -->
+            <div class="footer-col">
+                <h4>Akhona Clinic</h4>
+                <p>Providing high-quality medical care, consultations, and emergency healthcare support to the Mayfair community.</p>
+            </div>
+
+            <!-- Column 2: Healthcare Services -->
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services.html">General Consultations</a></li>
+                    <li><a href="services.html">Emergency Care</a></li>
+                    <li><a href="services.html">Health Screenings</a></li>
+                    <li><a href="services.html">Prescriptions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about us.html">About Us</a></li>
+                    <li><a href="Services.html">Medical Services</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="Enquiry.html">Book Appointment</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact & Social Media -->
+            <div class="footer-col">
+                <h4>Talk To Us</h4>
+                <p><strong>Tel:</strong> +27 11 123 4567</p>
+                <p><strong>Email:</strong> info@akhonaclinic.co.za</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://x.com" target="_blank">X</a>
+                    <a href="https://youtube.com" target="_blank">YouTube</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Akhona Clinic. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
