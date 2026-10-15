@@ -6,14 +6,31 @@
     <title>Services | Akhona Clinic</title>
   
     <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/lightbox.js"></script>
+    <script src="../javascript/search.js"></script>
+    <script src="../javascript/validation.js"></script>
 </head>
 <body>
  <header class="site-header">
          <img src="../images/Logo 1..png"
        alt="Akhona Clinic"
        class="logo-img">
-           <h2>Akhona Clinic</h2>
+         
        </div>
+
+       <!-- Search Bar -->
+<form class="search-form" id="searchForm" role="search">
+    <input
+        type="search"
+        id="siteSearch"
+        placeholder="Search the website..."
+        aria-label="Search website"
+        required
+    >
+    <button type="submit">Search</button>
+</form>
+
 <nav class="navbar">
     <ul>
                 <li><a href="../index.html">Home</a></li>
